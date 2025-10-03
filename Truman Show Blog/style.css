@@ -1,0 +1,101 @@
+/* Another way to add fonts without downloading */
+@import url(https://db.onlinewebfonts.com/c/5d033c59186f3ff3e3e2305b22bb26c5?family=FS+Truman+Web);
+/* another way to add fonts to the page. In this case, this needed downloading due to CORS (Cross-Origin Restrictions).*/
+/* Adding multiple formats can help for fallback if one doesn't work. */
+@font-face {
+    font-family: "Trumania";
+    src: url(./fonts/films.trumania.woff) format("woff"),
+         url(./fonts/trumania-een/films.Trumania.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Eurostile Extended Regular";
+    src: url(./fonts/Eurostile\ Extended\ Regular.ttf) format("truetype");
+}
+h1 {
+    color:red;
+    font-family: "Trumania";
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 2px 2px 2px rgb(54, 50, 50);
+    font-weight: 100px;
+    margin: -10px;
+    margin-bottom: 10px;
+}
+/* em is for emphasis, default is in italics */
+/* !important is a special flag that gives a property value the highest priority, overriding almost all other rules. */
+h1 em {
+    font-family: "FS Truman Web" !important;
+    font-style: normal !important;
+    font-size: 50px;
+    padding: 0.5%;
+}
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: darkgrey;
+    /* border: 2px solid red; */
+    padding: 5px;
+    font-family: "Eurostile Extended Regular";
+}
+
+#nav a {
+    padding: 6px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#nav a::after {
+    content: "|";
+    padding-left: 120px;
+}
+#nav a:last-child:after {
+       content: none;
+}
+
+body {
+    background-color: rgb(118, 189, 230);
+    margin: 0;
+}
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    color: white;
+    border: 2px solid red;
+}
+.gallery img {
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 20%;
+}
+
+.gallery p {
+    text-align: center;
+    margin: 20px;
+    /* border: 2px solid yellow; */
+    
+}
+.truman {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    /* border: green 2px solid; */
+    align-items: center;
+}
+
+.merch {
+    display: flex;
+    /* border: 2px purple solid; */
+    justify-content: center;
+}
+
+.cards img {
+    width: 120px;
+}
